@@ -49,13 +49,13 @@ func main() {
   flag.Visit(func(f *flag.Flag){
     fmt.Printf("参数名[%s], 参数值[%s], 默认值[%s], 描述信息[%s]\n", f.Name, f.Value, f.DefValue, f.Usage)
   })
-  fmt.Println("---遍历有输入的参数（结束）---\n")
+  fmt.Println("---遍历有输入的参数（结束）---")
 
   fmt.Println("---遍历所有的参数（开始）---")
   //VisitAll方法会遍历所有定义的参数(包括没有在命令行输入的)，flag.Flag可以将参数的名称、值、默认值、描述等内容取到
   flag.VisitAll(func(f *flag.Flag){
     fmt.Printf("参数名[%s], 参数值[%s], 默认值[%s], 描述信息[%s]\n", f.Name, f.Value, f.DefValue, f.Usage)
   })
-  fmt.Println("---遍历所有的参数（结束）---\n")
+  fmt.Println("---遍历所有的参数（结束）---")
 }
 
